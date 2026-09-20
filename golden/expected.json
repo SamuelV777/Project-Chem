@@ -1,0 +1,33 @@
+{
+  "task_id": "task-01",
+  "locked_at_step": "4.1",
+  "rule": "f(x) = (a*x^2 + b*x + c) mod m",
+  "answer": {
+    "m": 837296441503,
+    "a": 1654397203,
+    "b": 402115669,
+    "c": 91027433
+  },
+  "constraints": {
+    "m_is_prime": true,
+    "m_range_exclusive": [10000000000, 10000000000000],
+    "coefficient_range": "1 <= a,b,c < m",
+    "domain": [0, 1000000],
+    "budget_units": 6,
+    "cost": {
+      "evaluate": 1,
+      "sample": 1,
+      "help": 0
+    }
+  },
+  "structure": {
+    "wrap_free_window": [0, 22],
+    "first_wrapping_input": 23,
+    "note": "the modulus is unobservable for x <= 22"
+  },
+  "grading": {
+    "match": "exact",
+    "required_fields": ["m", "a", "b", "c"],
+    "partial_credit": false
+  }
+}
